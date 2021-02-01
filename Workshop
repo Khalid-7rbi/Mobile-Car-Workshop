@@ -1,1 +1,35 @@
+public class Workshop {
+    private List<Technician> technicianList ;
+    private String order ;
+    
+    
+ 
+   
+    public Workshop (){
+       
+    }
+    
+    
+    public void sendTechnician(){
+        
+    }
+   
+    public void acceptOrder(){
+        
+    }
+    
+    public void closeOrder(){
+        
+    }
+    public void hireTechnician(){
+        
+    }
+    public void contactSupport(){
+        
+    }
+    public void releaseTechnician(){
+        
+    }
+    
+}
 
