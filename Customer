@@ -1,0 +1,59 @@
+package com.example.mobilecarsworkhop;
+
+public class Customer {
+    int CustomerNumber;
+    String password;
+    String CustomerEmail;
+    int CustomerID;
+    String CustomerName;
+    String CarType;
+
+    public int getCustomerNumber() {
+        return CustomerNumber;
+    }
+
+    public void setCustomerNumber(int customerNumber) {
+        CustomerNumber = customerNumber;
+    }
+
+    public String getCustomerEmail() {
+        return CustomerEmail;
+    }
+
+    public void setCustomerEmail(String customerEmail) {
+        CustomerEmail = customerEmail;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public int getCustomerID() {
+        return CustomerID;
+    }
+
+    public void setCustomerID(int customerID) {
+        CustomerID = customerID;
+    }
+
+    public String getCustomerName() {
+        return CustomerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        CustomerName = customerName;
+    }
+
+    public String getCarType() {
+        return CarType;
+    }
+
+    public void setCarType(String carType) {
+        CarType = carType;
+    }
+
+}
