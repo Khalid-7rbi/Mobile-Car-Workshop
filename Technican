@@ -1,0 +1,13 @@
+package com.example.mobilecarsworkhop;
+
+public class Technican {
+    int technicanID;
+
+    public int getTechnicanID() {
+        return technicanID;
+    }
+
+    public void setTechnicanID(int technicanID) {
+        this.technicanID = technicanID;
+    }
+}
