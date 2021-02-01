@@ -1,0 +1,26 @@
+package com.example.mobilecarsworkhop;
+
+public class Support {
+
+    int employeeID;
+    String issue;
+
+    public int getEmployeeID() {
+        return employeeID;
+    }
+
+    public void setEmployeeID(int employeeID) {
+        this.employeeID = employeeID;
+    }
+
+    public String getIssue() {
+        return issue;
+    }
+
+    public String recieveIssue () {
+
+       return getIssue();
+    }
+
+}
+
