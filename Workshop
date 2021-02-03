@@ -2,7 +2,7 @@ public class Workshop {
     private List<Technician> technicianList ;
     private String order ;
     
-    
+    private String S ;
  
    
     public Workshop (){
