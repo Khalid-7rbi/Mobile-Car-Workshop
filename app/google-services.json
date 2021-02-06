@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "936370409708",
+    "project_id": "mobile-car-workshop",
+    "storage_bucket": "mobile-car-workshop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936370409708:android:db6e1cede487e7edae95c9",
+        "android_client_info": {
+          "package_name": "com.example.mobilecarworkshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "936370409708-tf8pko4m3u688e8rakr2qdje9gqfq4p4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mobilecarworkshop",
+            "certificate_hash": "25c0e6d26a586cfd9e6ff2e47b576b2443ed4151"
+          }
+        },
+        {
+          "client_id": "936370409708-h44hjiu45fovs7afbpfocko1qfqtkf3v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbbGQFjtkuG-3w7XX298YBQ5XRH3EpgXo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "936370409708-h44hjiu45fovs7afbpfocko1qfqtkf3v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
