@@ -21,5 +21,18 @@ public class MainPage extends AppCompatActivity {
                 startActivity(startIntent);
             }
         });
+
+        Button signUpBTN = (Button)findViewById(R.id.Sign_upBTN);
+        signUpBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent2 = new Intent(getApplicationContext(),Regeister.class);
+                startActivity(startIntent2);
+            }
+        });
+
+
+
+
     }
 }
