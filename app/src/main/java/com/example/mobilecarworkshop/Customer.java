@@ -14,12 +14,17 @@ public class Customer extends AppCompatActivity {
 
     TextView fullName,email,phone;
 
-    Button profile;
+    Button profile,requestBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer);
 
+
+    }
+    public void request(View view){
+
+        startActivity(new Intent(getApplicationContext(),RequestPage.class));
 
     }
 
