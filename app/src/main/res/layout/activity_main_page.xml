@@ -8,6 +8,19 @@
     tools:context=".MainPage">
 
     <Button
+        android:id="@+id/supportBTN"
+        android:layout_width="107dp"
+        android:layout_height="64dp"
+        android:background="#EAC6C6"
+        android:text="support"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.675" />
+
+    <Button
         android:id="@+id/Sign_upBTN"
         android:layout_width="100dp"
         android:layout_height="90dp"
