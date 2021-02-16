@@ -31,7 +31,14 @@ public class MainPage extends AppCompatActivity {
             }
         });
 
-
+        Button supportBTN = (Button)findViewById(R.id.supportBTN);
+        supportBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent3 = new Intent(getApplicationContext(),support.class);
+                startActivity(startIntent3);
+            }
+        });
 
 
     }
