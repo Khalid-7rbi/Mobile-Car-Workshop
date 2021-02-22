@@ -19,7 +19,7 @@ public class FirstPage extends AppCompatActivity {
         customerF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(),MainPage.class);
+                Intent startIntent = new Intent(getApplicationContext(),Login.class);
                 startActivity(startIntent);
             }
         });
@@ -29,8 +29,7 @@ public class FirstPage extends AppCompatActivity {
         WorkshopF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent startIntent2 = new Intent(getApplicationContext(),Regeister.class);
-                startActivity(startIntent2);
+
             }
         });
 
