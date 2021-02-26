@@ -1,12 +1,14 @@
 package com.example.mobilecarworkshop;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -24,7 +26,7 @@ public class RequestPage extends AppCompatActivity {
     Button mNextBtn;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
-    String userID;
+    String userID ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,21 +53,16 @@ public class RequestPage extends AppCompatActivity {
                 userID = fAuth.getCurrentUser().getUid();
                 DocumentReference documentReference = fStore.collection("CustomerRequest").document(userID);
 
-                Map<String,Object> user = new HashMap<>();
-                user.put("CompanyType",company);
-                user.put("carType",car);
-                user.put("problem",problem);
+                Intent intent = new Intent(RequestPage.this, CustomerLocation.class);
+                intent.putExtra("CompanyType",company);
+                intent.putExtra("carType",car);
+                intent.putExtra("problem",problem);
+                startActivity(intent);
 
 
-                documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        Log.d(TAG, "onSuccess: Request created successfully! "+userID);
-                    }
-                });
 
 
-                startActivity(new Intent(getApplicationContext(), Customer.class));
+
             }
         });
 
