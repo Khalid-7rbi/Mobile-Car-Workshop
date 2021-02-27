@@ -26,10 +26,13 @@ public class FirstPage extends AppCompatActivity {
         });
 
 
-        Button WorkshopF = (Button)findViewById(R.id.WorkshopF);
+        final Button WorkshopF = (Button)findViewById(R.id.WorkshopF);
         WorkshopF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                Intent startIntent = new Intent(getApplicationContext(),Workshop_login.class);
+                startActivity(startIntent);
 
             }
         });

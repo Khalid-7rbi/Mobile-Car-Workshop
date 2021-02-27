@@ -28,7 +28,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Regeister extends AppCompatActivity {
+public class Workshop_regeister extends AppCompatActivity {
 
     public static final String TAG = "TAG";
     EditText mFullName,mEmail,mPassword,mPhone;
@@ -100,9 +100,9 @@ public class Regeister extends AppCompatActivity {
 
                         if(task.isSuccessful()){
 
-                            Toast.makeText(Regeister.this, "User Created ", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Workshop_regeister.this, "workshop Created ", Toast.LENGTH_SHORT).show();
                             userID = fAuth.getCurrentUser().getUid();
-                            DocumentReference documentReference = fStore.collection("users").document(userID);
+                            DocumentReference documentReference = fStore.collection("workshop").document(userID);
                             Map<String,Object> user = new HashMap<>();
                             user.put("fName",fullName);
                             user.put("email",email);
@@ -113,11 +113,11 @@ public class Regeister extends AppCompatActivity {
                                     Log.d(TAG, "onSuccess: user profile is created "+userID);
                                 }
                             });
-                            startActivity(new Intent(getApplicationContext(), Customer.class));
+                            startActivity(new Intent(getApplicationContext(), Workshop_login.class));
                         }
                         else{
 
-                            Toast.makeText(Regeister.this, "Error !"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Workshop_regeister.this, "Error !"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             progressBar.setVisibility(View.GONE);
                         }
                     }
@@ -129,7 +129,7 @@ public class Regeister extends AppCompatActivity {
         mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),Login.class));
+                startActivity(new Intent(getApplicationContext(),Workshop_login.class));
             }
         });
     }

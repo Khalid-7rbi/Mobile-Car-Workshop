@@ -12,11 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Workshop_main"></activity>
+        <activity android:name=".Workshop_login" />
+        <activity android:name=".Workshop_regeister" />
 
-        <meta-data android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDJawG0t_xoY8J1KRMHTHe5nTWKmZffGww"
-            />
-        <activity android:name=".CustomerLocation"></activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDJawG0t_xoY8J1KRMHTHe5nTWKmZffGww" />
+
+        <activity android:name=".CustomerLocation" />
         <activity android:name=".support" />
         <activity android:name=".RequestPage" />
         <activity android:name=".FirstPage">
