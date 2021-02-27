@@ -19,7 +19,7 @@ public class Profile extends AppCompatActivity {
 
 
 
-    TextView fullName, email,phone,test1,test2;
+    TextView fullName, email,phone;
 
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;

@@ -6,4 +6,66 @@
     android:layout_height="match_parent"
     tools:context=".info">
 
+    <TextView
+        android:id="@+id/PhoneW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Phone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintStart_toEndOf="@+id/imageViewW"
+        app:layout_constraintTop_toBottomOf="@+id/EmailW"
+        app:layout_constraintVertical_bias="0.065" />
+
+    <TextView
+        android:id="@+id/EmailW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email Address"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintStart_toEndOf="@+id/imageViewW"
+        app:layout_constraintTop_toBottomOf="@+id/nameW"
+        app:layout_constraintVertical_bias="0.066" />
+
+    <TextView
+        android:id="@+id/nameW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toEndOf="@+id/imageViewW"
+        app:layout_constraintTop_toBottomOf="@+id/InfoW"
+        app:layout_constraintVertical_bias="0.094" />
+
+    <TextView
+        android:id="@+id/InfoW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Workshop Info"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.187" />
+
+    <ImageView
+        android:id="@+id/imageViewW"
+        android:layout_width="128dp"
+        android:layout_height="140dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.324"
+        app:srcCompat="@android:drawable/sym_def_app_icon"
+        tools:srcCompat="@tools:sample/avatars" />
 </androidx.constraintlayout.widget.ConstraintLayout>
