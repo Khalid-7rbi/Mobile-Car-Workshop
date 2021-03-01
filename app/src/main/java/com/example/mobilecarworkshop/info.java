@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 
 public class info extends AppCompatActivity {
 
-    TextView Name, email,phone;
+    TextView fullName, email,phone;
 
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
@@ -28,7 +28,7 @@ public class info extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
 
-        Name = findViewById(R.id.nameW);
+        fullName = findViewById(R.id.nameW);
         email    = findViewById(R.id.EmailW);
         phone    = findViewById(R.id.PhoneW);
 
@@ -44,7 +44,7 @@ public class info extends AppCompatActivity {
 
                 phone.setText(documentSnapshot.getString("phone"));
                 email.setText(documentSnapshot.getString("email"));
-                Name.setText(documentSnapshot.getString("Name"));
+                fullName.setText(documentSnapshot.getString("Name"));
             }
         });
 

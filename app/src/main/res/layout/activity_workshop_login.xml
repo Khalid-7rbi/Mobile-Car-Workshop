@@ -7,6 +7,18 @@
     tools:context=".Login">
 
 
+    <Button
+        android:id="@+id/supportBTNlog2"
+        android:layout_width="107dp"
+        android:layout_height="64dp"
+        android:background="#EAC6C6"
+        android:text="support"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar"
+        app:layout_constraintVertical_bias="0.666" />
+
     <EditText
         android:id="@+id/Password"
         android:layout_width="287dp"

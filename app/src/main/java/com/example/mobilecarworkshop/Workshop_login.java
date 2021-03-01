@@ -93,5 +93,14 @@ public class Workshop_login extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), Workshop_regeister.class));
             }
         });
+
+        Button supportBTNlog = (Button)findViewById(R.id.supportBTNlog);
+        supportBTNlog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent3 = new Intent(getApplicationContext(),support.class);
+                startActivity(startIntent3);
+            }
+        });
     }
 }
