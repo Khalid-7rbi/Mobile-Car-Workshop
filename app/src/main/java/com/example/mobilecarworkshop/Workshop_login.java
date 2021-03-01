@@ -94,7 +94,7 @@ public class Workshop_login extends AppCompatActivity {
             }
         });
 
-        Button supportBTNlog = (Button)findViewById(R.id.supportBTNlog);
+        Button supportBTNlog = (Button)findViewById(R.id.supportBTNlog2);
         supportBTNlog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
