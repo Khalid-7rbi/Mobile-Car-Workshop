@@ -31,7 +31,7 @@ public class Workshop_login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_workshop_login);
 
         mEmail = findViewById(R.id.Email);
         mPassword = findViewById(R.id.Password);
