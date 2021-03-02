@@ -61,7 +61,7 @@ public class Workshop_regestier extends AppCompatActivity {
 
         if(fAuth.getCurrentUser()!=null){
 
-            startActivity(new Intent(getApplicationContext(), Customer.class));
+            startActivity(new Intent(getApplicationContext(), Workshop_main.class));
             finish();
         }
 
