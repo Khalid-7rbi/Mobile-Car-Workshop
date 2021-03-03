@@ -14,13 +14,21 @@ public class Workshop_main extends AppCompatActivity {
 
 
     Button wLogout;
+    Button checkRequests;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workshop_main);
 
     wLogout = findViewById(R.id.logout);
-
+        checkRequests = findViewById(R.id.checkRequests);
+        checkRequests.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(),recycleView.class);
+                startActivity(startIntent);
+            }
+        });
     wLogout.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
