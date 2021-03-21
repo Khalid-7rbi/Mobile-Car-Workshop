@@ -33,7 +33,7 @@ public class Workshop_main extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(getApplicationContext(),Workshop_login.class));
+            startActivity(new Intent(getApplicationContext(),FirstPage.class));
             finish();
         }
     });

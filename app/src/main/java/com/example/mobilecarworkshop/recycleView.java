@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -52,6 +54,7 @@ public class recycleView extends AppCompatActivity {
                 return new RequestViewHolder(view);
             }
 
+
             @Override
             protected void onBindViewHolder(@NonNull RequestViewHolder holder, int position, @NonNull requestList model) {
                     holder.name.setText(model.getfName());
@@ -60,6 +63,22 @@ public class recycleView extends AppCompatActivity {
                 holder.carType.setText(model.getCarType());
                 holder.lat.setText(model.getLat());
                 holder.lng.setText(model.getLng());
+
+
+
+
+                final String lng1 = model.getLng();
+                final String lat1 = model.getLat();
+              holder.locationImage.setOnClickListener(new View.OnClickListener() {
+                  @Override
+                  public void onClick(View view) {
+                      String uri = "http://maps.google.com/maps?q=loc:" + lat1 + "," + lng1;
+                      Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+                      intent.setPackage("com.google.android.apps.maps");
+                      startActivity(intent);
+                  }
+              });
+
                 holder.problem.setText(model.getProblem());
             }
         };
@@ -70,9 +89,11 @@ public class recycleView extends AppCompatActivity {
 
     private class RequestViewHolder extends RecyclerView.ViewHolder {
         private TextView name,phone,company,carType,lat,lng,problem;
-        private ImageView locationImage;
+        private  ImageView locationImage;
+
         public RequestViewHolder(@NonNull View itemView) {
             super(itemView);
+            locationImage = itemView.findViewById(R.id.locationPic);
             name = itemView.findViewById(R.id.cName);
             phone= itemView.findViewById(R.id.cPhone);
             company= itemView.findViewById(R.id.companyT);
