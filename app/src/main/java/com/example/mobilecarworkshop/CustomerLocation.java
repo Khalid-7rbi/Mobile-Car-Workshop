@@ -164,7 +164,7 @@ public class CustomerLocation extends AppCompatActivity {
                             user.put("phone",phone);
 
 
-                            startActivity(new Intent(getApplicationContext(),Customer.class));
+                            startActivity(new Intent(getApplicationContext(),ConfirmRequest.class));
 
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override

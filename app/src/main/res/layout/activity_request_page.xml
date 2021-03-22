@@ -6,86 +6,138 @@
     android:layout_height="match_parent"
     tools:context=".RequestPage">
 
+
+    <TextView
+        android:id="@+id/CarsDetails"
+        android:layout_width="235dp"
+        android:layout_height="80dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Cars Details"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/typeCompany"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.14" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="170dp"
+        android:layout_height="151dp"
+        android:background="#00009688"
+        android:src="@drawable/sedancarfront"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/CarsDetails"
+        app:layout_constraintVertical_bias="0.099" />
+
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
-        android:text="Type of company"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Type Of Company"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/typeCompany"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/CarsDetails"
+        app:layout_constraintVertical_bias="0.924" />
+
 
     <EditText
         android:id="@+id/typeCompany"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="367dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="228dp"
+        android:background="#66009688"
+        android:backgroundTint="#009688"
         android:ems="10"
+        android:hint="Enter Company Type"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/problem"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.266" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.515" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="Type of car"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Type Of Car"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/typeCar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/typeCompany" />
+        app:layout_constraintTop_toBottomOf="@+id/typeCompany"
+        app:layout_constraintVertical_bias="0.854" />
 
     <EditText
         android:id="@+id/typeCar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+
+        android:layout_width="367dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="56dp"
+        android:background="#66009688"
+        android:backgroundTint="#009688"
         android:ems="10"
+        android:hint="Enter Car Type"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/problem"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/typeCompany" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.515" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Description of problem"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.216"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/typeCar" />
-
-    <EditText
-        android:id="@+id/problem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:ems="10"
-        android:inputType="textPersonName"
+        android:layout_marginBottom="168dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Descreption Problem"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/typeCar" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.909" />
+
+    <EditText
+        android:id="@+id/problem"
+
+        android:layout_width="367dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="116dp"
+        android:background="#66009688"
+        android:backgroundTint="#009688"
+        android:ems="10"
+        android:hint="Enter Type Of Problem"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.515" />
 
     <Button
         android:id="@+id/next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
+        android:layout_width="127dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="20dp"
         android:background="#EAC6C6"
         android:onClick="nextBtn"
         android:text="Next"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/problem" />
 </androidx.constraintlayout.widget.ConstraintLayout>

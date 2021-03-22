@@ -1,21 +1,26 @@
 package com.example.mobilecarworkshop;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.ColorSpace;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.firestore.CollectionReference;
@@ -25,19 +30,28 @@ import com.google.firebase.firestore.Query;
 
 import java.util.ArrayList;
 
+import static android.graphics.ColorSpace.*;
+
 public class recycleView extends AppCompatActivity {
     private RecyclerView mFirestoreList;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     RecyclerView recyclerView;
+    private Customer customer;
     ArrayList<requestList>list;
     private FirestoreRecyclerAdapter adapter;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycle_view);
         fAuth    = FirebaseAuth.getInstance();
         fStore   = FirebaseFirestore.getInstance();
+        findViewById(R.id.buttonDelete).setOnClickListener((View.OnClickListener) this);
+
+
+
         mFirestoreList= findViewById(R.id.myRecycler);
 
         Query query = fStore.collection("CustomerRequest");
@@ -69,7 +83,10 @@ public class recycleView extends AppCompatActivity {
 
                 final String lng1 = model.getLng();
                 final String lat1 = model.getLat();
-              holder.locationImage.setOnClickListener(new View.OnClickListener() {
+
+
+
+                holder.locationImage.setOnClickListener(new View.OnClickListener() {
                   @Override
                   public void onClick(View view) {
                       String uri = "http://maps.google.com/maps?q=loc:" + lat1 + "," + lng1;
@@ -85,9 +102,13 @@ public class recycleView extends AppCompatActivity {
          mFirestoreList.setHasFixedSize(true);
          mFirestoreList.setLayoutManager(new LinearLayoutManager(this));
          mFirestoreList.setAdapter(adapter);
+
+
+
+
     }
 
-    private class RequestViewHolder extends RecyclerView.ViewHolder {
+    private class RequestViewHolder extends RecyclerView.ViewHolder  {
         private TextView name,phone,company,carType,lat,lng,problem;
         private  ImageView locationImage;
 
@@ -101,7 +122,9 @@ public class recycleView extends AppCompatActivity {
             lat= itemView.findViewById(R.id.cLat);
             lng = itemView.findViewById(R.id.cLng);
             problem=itemView.findViewById(R.id.prob);
+
         }
+
     }
 
     @Override
@@ -115,4 +138,6 @@ public class recycleView extends AppCompatActivity {
         super.onStart();
         adapter.startListening();
     }
+
+
 }
