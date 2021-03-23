@@ -43,4 +43,7 @@ public class Customer extends AppCompatActivity {
         finish();
 
     }
+    public void delete(View view){
+        startActivity(new Intent(getApplicationContext(),deleteRequest.class));
+    }
 }
