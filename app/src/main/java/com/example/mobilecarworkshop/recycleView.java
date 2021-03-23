@@ -37,7 +37,7 @@ public class recycleView extends AppCompatActivity {
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     RecyclerView recyclerView;
-    private Customer customer;
+
     ArrayList<requestList>list;
     private FirestoreRecyclerAdapter adapter;
 
@@ -48,9 +48,6 @@ public class recycleView extends AppCompatActivity {
         setContentView(R.layout.activity_recycle_view);
         fAuth    = FirebaseAuth.getInstance();
         fStore   = FirebaseFirestore.getInstance();
-        findViewById(R.id.buttonDelete).setOnClickListener((View.OnClickListener) this);
-
-
 
         mFirestoreList= findViewById(R.id.myRecycler);
 
