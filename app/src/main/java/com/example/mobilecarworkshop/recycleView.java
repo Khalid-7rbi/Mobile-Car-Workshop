@@ -22,6 +22,7 @@ import android.widget.TextView;
 
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.firebase.ui.firestore.ObservableSnapshotArray;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -76,6 +77,8 @@ public class recycleView extends AppCompatActivity {
 
 
 
+
+
             @Override
             protected void onBindViewHolder(@NonNull  RequestViewHolder holder, final int position, @NonNull requestList model) {
                     holder.name.setText(model.getfName());
@@ -122,7 +125,16 @@ public class recycleView extends AppCompatActivity {
                         startActivity(callIntent);
                     }
                 });
+              holder.buttonD.setOnClickListener(new View.OnClickListener() {
+                  @Override
+                  public void onClick(View view) {
+                      ObservableSnapshotArray<requestList> observableSnapshotArray = getSnapshots();
+                      DocumentReference documentReference =
+                              observableSnapshotArray.getSnapshot(position).getReference();
 
+                      documentReference.delete();
+                  }
+              });
 
 
 
@@ -152,6 +164,7 @@ public class recycleView extends AppCompatActivity {
             phone= itemView.findViewById(R.id.cPhone);
             company= itemView.findViewById(R.id.companyT);
             carType = itemView.findViewById(R.id.carT);
+            buttonD = itemView.findViewById(R.id.button2);
 
             problem=itemView.findViewById(R.id.prob);
 

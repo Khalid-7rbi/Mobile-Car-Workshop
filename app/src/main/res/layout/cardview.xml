@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:weightSum="2"
     android:orientation="horizontal"
+    android:gravity="center"
     android:background="@drawable/border"
 
     >
@@ -12,6 +13,7 @@
     android:layout_width="match_parent"
     android:layout_weight="1"
     android:orientation="vertical"
+    android:gravity="center"
     android:layout_height="match_parent"
 
     >
@@ -131,6 +133,19 @@
 
 
     </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/empty2"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:background="#009688"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Close order" />
 
     <TextView
         android:layout_width="match_parent"
