@@ -11,7 +11,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Workshop_main extends AppCompatActivity {
 
-
+    Button profileW;
 
     Button wLogout;
     Button checkRequests;
@@ -19,6 +19,8 @@ public class Workshop_main extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workshop_main);
+
+
 
     wLogout = findViewById(R.id.logout);
         checkRequests = findViewById(R.id.checkRequests);
@@ -37,6 +39,14 @@ public class Workshop_main extends AppCompatActivity {
             finish();
         }
     });
+
+
+    }
+
+
+    public void profileW(View view){
+
+        startActivity(new Intent(getApplicationContext(),ProfileW.class));
 
     }
 }
