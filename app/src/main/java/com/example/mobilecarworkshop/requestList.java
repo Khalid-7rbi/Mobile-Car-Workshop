@@ -1,9 +1,12 @@
 package com.example.mobilecarworkshop;
 
+import com.google.firebase.firestore.Exclude;
+
 public class requestList {
 
     private String fName,phone;
     private String CompanyType,carType,lat,lng,problem;
+
 
     private requestList() {
     }
@@ -74,3 +77,4 @@ public class requestList {
         this.problem = problem;
     }
 }
+
