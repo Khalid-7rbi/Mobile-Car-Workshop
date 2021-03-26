@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".Login">
 
+    <ImageButton
+        android:id="@+id/Arrow"
+        android:layout_width="86dp"
+        android:layout_height="91dp"
+        android:background="#00009688"
+        android:src="@drawable/left_aarrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView"

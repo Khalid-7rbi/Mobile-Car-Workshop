@@ -1,7 +1,10 @@
 package com.example.mobilecarworkshop;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -51,6 +54,16 @@ public class Profile extends AppCompatActivity {
         });
 
 
+        ImageButton arr = (ImageButton) findViewById (R.id.Arrow);
+        arr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent startIntent = new Intent(getApplicationContext(),Customer.class);
+                startActivity(startIntent);
+
+            }
+        });
 
     }
 }

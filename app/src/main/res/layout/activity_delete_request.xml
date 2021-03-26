@@ -6,14 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".deleteRequest">
 
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="377dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Are you sure you want delete order?"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/deleteBTN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
     <Button
         android:id="@+id/deleteBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#EAC6C6"
+        android:layout_width="353dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="40dp"
+        android:background="#009688"
         android:text="Order Complete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.476" />
+
+    <Button
+        android:id="@+id/Cancel"
+        android:layout_width="353dp"
+        android:layout_height="62dp"
+        android:background="#009688"
+        android:text="Cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deleteBTN"
+        app:layout_constraintVertical_bias="0.097" />
 </androidx.constraintlayout.widget.ConstraintLayout>

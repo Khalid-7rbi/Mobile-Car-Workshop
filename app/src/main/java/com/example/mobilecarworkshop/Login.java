@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -92,6 +93,17 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(),Regeister.class));
+            }
+        });
+
+        ImageButton arr = (ImageButton) findViewById (R.id.Arrow);
+        arr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent startIntent = new Intent(getApplicationContext(),FirstPage.class);
+                startActivity(startIntent);
+
             }
         });
     }

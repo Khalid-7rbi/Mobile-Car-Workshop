@@ -13,6 +13,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class deleteRequest extends AppCompatActivity {
+
     Button DeleteBtn;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
@@ -35,6 +36,17 @@ public class deleteRequest extends AppCompatActivity {
                startActivity(new Intent(getApplicationContext(),Customer.class));
            }
        });
+
+        Button cancel = (Button)findViewById(R.id.Cancel);
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent startIntent = new Intent(getApplicationContext(),Customer.class);
+                startActivity(startIntent);
+
+            }
+        });
 
     }
 }

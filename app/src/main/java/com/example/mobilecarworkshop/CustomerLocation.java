@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 
@@ -99,6 +100,16 @@ public class CustomerLocation extends AppCompatActivity {
                     new String[]{Manifest.permission.ACCESS_FINE_LOCATION},44);
         }
 
+        ImageButton arr = (ImageButton) findViewById (R.id.Arrow);
+        arr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent startIntent = new Intent(getApplicationContext(),RequestPage.class);
+                startActivity(startIntent);
+
+            }
+        });
     }
 
     private void getCurrentLocation() {

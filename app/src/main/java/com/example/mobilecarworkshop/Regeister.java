@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -64,6 +65,17 @@ public class Regeister extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), Customer.class));
             finish();
         }
+
+        ImageButton arr = (ImageButton) findViewById (R.id.Arrow);
+        arr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent startIntent = new Intent(getApplicationContext(),Login.class);
+                startActivity(startIntent);
+
+            }
+        });
 
         mRegisterdBtn.setOnClickListener(new View.OnClickListener() {
             @Override

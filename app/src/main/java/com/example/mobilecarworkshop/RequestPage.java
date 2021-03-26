@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -62,6 +63,17 @@ public class RequestPage extends AppCompatActivity {
 
 
 
+
+            }
+        });
+
+        ImageButton arr = (ImageButton) findViewById (R.id.Arrow);
+        arr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent startIntent = new Intent(getApplicationContext(),Customer.class);
+                startActivity(startIntent);
 
             }
         });
