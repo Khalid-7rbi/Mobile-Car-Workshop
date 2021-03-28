@@ -27,6 +27,15 @@ public class Customer extends AppCompatActivity {
 
 
     }
+
+    public void support(View view){
+
+        startActivity(new Intent(getApplicationContext(),support.class));
+
+    }
+
+
+
     public void request(View view){
 
         startActivity(new Intent(getApplicationContext(),RequestPage.class));

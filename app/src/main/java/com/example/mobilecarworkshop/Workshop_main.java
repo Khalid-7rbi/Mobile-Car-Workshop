@@ -43,6 +43,11 @@ public class Workshop_main extends AppCompatActivity {
 
 
     }
+    public void support(View view){
+
+        startActivity(new Intent(getApplicationContext(),support.class));
+
+    }
 
 
     public void profileW(View view){

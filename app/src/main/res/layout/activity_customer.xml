@@ -7,7 +7,6 @@
     tools:context=".Customer">
 
 
-
     <Button
         android:id="@+id/LogOut"
         android:layout_width="353dp"
@@ -36,6 +35,7 @@
         app:layout_constraintTop_toBottomOf="@+id/requestBtn"
         app:layout_constraintVertical_bias="0.505" />
 
+
     <Button
         android:id="@+id/requestBtn"
         android:layout_width="353dp"
@@ -45,9 +45,10 @@
         android:text="Request"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.275"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.333" />
 
     <Button
         android:id="@+id/dActivity"
@@ -60,7 +61,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/requestBtn"
-        app:layout_constraintVertical_bias="0.47" />
+        app:layout_constraintVertical_bias="0.385" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -72,7 +73,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.191" />
+        app:layout_constraintVertical_bias="0.057" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="349dp"
+        android:layout_height="66dp"
+        android:background="#009688"
+        android:onClick="support"
+        android:text="Support"
+        app:layout_constraintBottom_toTopOf="@+id/LogOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dActivity" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
