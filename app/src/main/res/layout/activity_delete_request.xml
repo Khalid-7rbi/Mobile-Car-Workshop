@@ -9,17 +9,18 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="377dp"
-        android:layout_height="54dp"
+        android:layout_width="282dp"
+        android:layout_height="52dp"
         android:layout_marginBottom="40dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="Are you sure you want delete order?"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/deleteBTN"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintHorizontal_bias="0.589"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/deleteBTN"
@@ -32,7 +33,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.476" />
+        app:layout_constraintVertical_bias="0.592" />
 
     <Button
         android:id="@+id/Cancel"
@@ -44,5 +45,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/deleteBTN"
-        app:layout_constraintVertical_bias="0.097" />
+        app:layout_constraintVertical_bias="0.188" />
 </androidx.constraintlayout.widget.ConstraintLayout>
