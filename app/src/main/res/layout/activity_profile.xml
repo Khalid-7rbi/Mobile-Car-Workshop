@@ -1,92 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#009688"
+    android:layout_weight="2"
+    android:orientation="vertical"
     tools:context=".Profile">
 
 
-    <ImageButton
-        android:id="@+id/Arrow"
-        android:layout_width="86dp"
-        android:layout_height="91dp"
-        android:background="#00009688"
-        android:src="@drawable/left_aarrow"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/yourProfile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#0C0C0C"
-        android:fontFamily="@font/bangers"
-        android:hapticFeedbackEnabled="true"
-        android:text="Your Profile"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.045" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#009688"
+        android:layout_height="250dp"
+
+        >
+        <ImageButton
+            android:id="@+id/Arrow"
+            android:layout_width="86dp"
+            android:layout_height="91dp"
+            android:background="#00009688"
+            android:src="@drawable/left_aarrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="138dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="145dp"
+            android:layout_marginBottom="52dp"
+            android:src="@drawable/user"
+            tools:srcCompat="@tools:sample/avatars" />
+
+
+    </RelativeLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
 
     <TextView
         android:id="@+id/nameProfile"
-        android:layout_width="wrap_content"
+
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+
+        android:drawableLeft="@android:drawable/sym_action_chat"
         android:fontFamily="@font/allerta"
+        android:drawablePadding="5dp"
+        android:paddingLeft="50dp"
+
         android:text="Your Name"
-        android:textColor="#CD2020"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.575"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/yourProfile" />
+        app:drawableTint="#009688" />
 
     <TextView
         android:id="@+id/emailProfile"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@android:drawable/sym_action_email"
         android:fontFamily="@font/allerta"
+        android:paddingLeft="50dp"
+
+        android:drawablePadding="5dp"
         android:text="Your Email Address"
-        android:textColor="#CD2020"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.676"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameProfile" />
+        app:drawableTint="#009688" />
 
     <TextView
         android:id="@+id/phoneProfile"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@android:drawable/sym_action_call"
+        android:drawablePadding="5dp"
+        android:paddingLeft="50dp"
+
         android:fontFamily="@font/allerta"
         android:text="Your Phone"
-        android:textColor="#CD2020"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.581"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailProfile" />
+        app:drawableTint="#009688" />
+</LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="128dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="164dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/sym_def_app_icon"
-        tools:srcCompat="@tools:sample/avatars" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+>
+
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:paddingLeft="140dp"
+            android:text="Current Request:"
+
+            android:textColor="#009688"
+
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+
+            android:paddingLeft="50dp"
+            android:text="Company Type:"
+
+            android:textColor="#009688"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+
+        <TextView
+
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/allerta"
+            android:paddingLeft="60dp"
+            />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+
+            android:paddingLeft="50dp"
+            android:text="Car Type:"
+
+            android:textColor="#009688"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/allerta"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="60dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+
+            android:paddingLeft="50dp"
+            android:text="Problem:"
+
+            android:textColor="#009688"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:paddingLeft="60dp"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/allerta"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="TextView" />
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>
+

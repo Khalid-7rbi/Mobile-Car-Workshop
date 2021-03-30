@@ -22,7 +22,7 @@ public class Profile extends AppCompatActivity {
 
 
 
-    TextView fullName, email,phone,test1,test2;
+    TextView fullName, email,phone,company,car,problem;
 
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
@@ -37,6 +37,10 @@ public class Profile extends AppCompatActivity {
         email    = findViewById(R.id.emailProfile);
         phone    = findViewById(R.id.phoneProfile);
 
+        company  = findViewById(R.id.textView10);
+        car      = findViewById(R.id.textView11);
+        problem  = findViewById(R.id.textView12);
+
         fAuth    = FirebaseAuth.getInstance();
         fStore   = FirebaseFirestore.getInstance();
 
@@ -50,6 +54,16 @@ public class Profile extends AppCompatActivity {
                 phone.setText(documentSnapshot.getString("phone"));
                 email.setText(documentSnapshot.getString("email"));
                 fullName.setText(documentSnapshot.getString("fName"));
+            }
+        });
+        final DocumentReference documentReference1 = fStore.collection("CustomerRequest").document(userID);
+        documentReference1.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
+
+                company.setText(documentSnapshot.getString("CompanyType"));
+                car.setText(documentSnapshot.getString("carType"));
+                problem.setText(documentSnapshot.getString("problem"));
             }
         });
 
