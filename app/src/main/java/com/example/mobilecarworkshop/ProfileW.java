@@ -23,7 +23,7 @@ import javax.annotation.Nullable;
 public class ProfileW extends AppCompatActivity {
 
 
-    TextView fullNamek, emailk,phonek,test1,test2;
+    TextView fullNamek, emailk,phonek,cName,cCar,cCompany,cProblem,cPhone;
 
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
@@ -37,6 +37,13 @@ public class ProfileW extends AppCompatActivity {
         fullNamek = findViewById(R.id.nameProfileW);
         emailk    = findViewById(R.id.emailProfileW);
         phonek    = findViewById(R.id.phoneProfileW);
+
+
+        cName     = findViewById(R.id.textView18);
+        cCompany  = findViewById(R.id.textView20);
+        cCar      = findViewById(R.id.textView22);
+        cProblem  = findViewById(R.id.textView24);
+        cPhone    = findViewById(R.id.textView26);
 
         fAuth    = FirebaseAuth.getInstance();
         fStore   = FirebaseFirestore.getInstance();
@@ -53,6 +60,21 @@ public class ProfileW extends AppCompatActivity {
                 fullNamek.setText(documentSnapshot.getString("fName"));
             }
         });
+
+        final DocumentReference documentReference1 = fStore.collection("RequestClosed").document(userIDk);
+        documentReference1.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
+
+                cName.setText(documentSnapshot.getString("CName"));
+                cCompany.setText(documentSnapshot.getString("CompanyType"));
+                cCar.setText(documentSnapshot.getString("carType"));
+                cPhone.setText(documentSnapshot.getString("Cphone"));
+                cProblem.setText(documentSnapshot.getString("problem"));
+            }
+        });
+
+
 
         ImageButton arr = (ImageButton) findViewById (R.id.Arrow);
         arr.setOnClickListener(new View.OnClickListener() {

@@ -34,6 +34,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import static android.graphics.ColorSpace.*;
 
@@ -44,10 +46,12 @@ public class recycleView extends AppCompatActivity {
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     RecyclerView recyclerView;
+    String userId;
 
     ArrayList<requestList>list;
     private FirestoreRecyclerAdapter adapter;
     TextView cmp1,phn1,nme1,typ1,prb1;
+    public static final String TAG = "TAG";
 
 
     @Override
@@ -94,6 +98,11 @@ public class recycleView extends AppCompatActivity {
                 final String lat1 = model.getLat();
                 final String phone1 = (String) "+966"+model.getPhone();
                 final String phone2 = (String)model.getPhone();
+                final String getName   = (String)model.getfName();
+                final String getCompany   = (String)model.getCompanyType();
+                final String getCar  = (String)model.getCarType();
+                final String getProblem     = (String)model.getProblem();
+
 
 
 
@@ -128,11 +137,32 @@ public class recycleView extends AppCompatActivity {
               holder.buttonD.setOnClickListener(new View.OnClickListener() {
                   @Override
                   public void onClick(View view) {
+
+                      userId = fAuth.getCurrentUser().getUid();
+                      DocumentReference documentReference1 = fStore.collection("RequestClosed").document(userId);
+
+                      Map<String,Object> user = new HashMap<>();
+                      user.put("CompanyType",getCompany);
+                      user.put("carType",getCar);
+                      user.put("problem",getProblem);
+
+                      user.put("CName",getName);
+                      user.put("Cphone",phone2);
+                      documentReference1.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                          @Override
+                          public void onSuccess(Void aVoid) {
+                              Log.d(TAG, "onSuccess: Request closed successfully! "+userId);
+                          }
+                      });
                       ObservableSnapshotArray<requestList> observableSnapshotArray = getSnapshots();
                       DocumentReference documentReference =
                               observableSnapshotArray.getSnapshot(position).getReference();
 
                       documentReference.delete();
+
+
+
+
                   }
               });
 
