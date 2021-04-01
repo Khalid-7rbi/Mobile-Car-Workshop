@@ -85,12 +85,16 @@ public class Regeister extends AppCompatActivity {
                 final String fullName = mFullName.getText().toString();
                 final String phone    = mPhone.getText().toString();
 
-                if(TextUtils.isEmpty(email)){
+                    try {
+                        if(TextUtils.isEmpty(email))
+                            throw new Exception();
+                    } catch (Exception e) {
+                        mEmail.setError("Email is Required");
+                        return;
+                    }
 
-                    mEmail.setError("Email is Required");
 
-                    return;
-                }
+
 
                 if(TextUtils.isEmpty(password)){
                     mPassword.setError("Password is Required");
