@@ -85,24 +85,45 @@ public class Regeister extends AppCompatActivity {
                 final String fullName = mFullName.getText().toString();
                 final String phone    = mPhone.getText().toString();
 
-                if(TextUtils.isEmpty(email)){
-
+                try {
+                    if(TextUtils.isEmpty(email))
+                        throw new Exception();
+                } catch (Exception e) {
                     mEmail.setError("Email is Required");
-
                     return;
                 }
 
-                if(TextUtils.isEmpty(password)){
+                try {
+                    if(TextUtils.isEmpty(fullName))
+                        throw new Exception();
+                } catch (Exception e) {
+                    mFullName.setError("Name is Required");
+                    return;
+                }
+                try {
+                    if(TextUtils.isEmpty(phone))
+                        throw new Exception();
+                } catch (Exception e) {
+                    mPhone.setError("Phone is Required");
+                    return;
+                }
+
+
+                try {
+                    if(TextUtils.isEmpty(password))
+                        throw new Exception();
+                } catch (Exception e) {
                     mPassword.setError("Password is Required");
                     return;
                 }
-
-                if(password.length()<6){
-
+                try {
+                    if(password.length()<6)
+                        throw new Exception();
+                } catch (Exception e) {
                     mPassword.setError("Password must be more than 6 characters");
-
                     return;
                 }
+
 
                 progressBar.setVisibility(View.VISIBLE);
 
