@@ -24,6 +24,12 @@ android {
 }
 
 dependencies {
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+
     implementation 'com.firebaseui:firebase-ui-firestore:7.1.1'
     implementation 'com.firebaseui:firebase-ui-auth:7.1.1'
 
